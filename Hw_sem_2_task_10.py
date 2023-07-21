@@ -8,18 +8,20 @@
 import random
 
 mount = int(input('введите количество монет: '))
-coins = []
-for i in range(mount):
-    coins.append(random.randint(0, 1))
-print(coins)
-
-avers, revers = 0, 0
-for i in range(mount):
-    if coins[i] == 0:
-        avers += 1
-    else:
-        revers += 1
-if avers < revers:
-    print (f'нужно перевернуть {avers} монеты')
+if mount <=0 : print('на столе отсутствуют монеты')
 else:
-    print (f'нужно перевернуть {revers} монеты')
+    coins = []
+    for i in range(mount):
+        coins.append(random.randint(0, 1))
+    print(coins)
+
+    avers, revers = 0, 0
+    for i in range(mount):
+        if coins[i] == 0:
+            avers += 1
+        else:
+            revers += 1
+    if avers < revers:
+        print (f'нужно перевернуть {avers} монеты')
+    else:
+        print (f'нужно перевернуть {revers} монеты')

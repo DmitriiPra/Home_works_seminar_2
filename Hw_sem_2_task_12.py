@@ -17,5 +17,6 @@ else:
         if first_term * second_term == product_numbers_P:
             res = 1
             print(f"задуманные числа: {first_term} и {second_term}")
+            break
     if res == 0:
         print("задачa не имеет решения")
